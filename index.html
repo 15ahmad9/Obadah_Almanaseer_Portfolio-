@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obadah Al-Manaseer | Business Lecturer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<h2>OBADAH</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Experience</a>
+<a href="#">Teaching</a>
+<a href="#">Contact</a>
+<button id="theme">🌙</button>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="content">
+<p class="small">Welcome, I am</p>
+<h1>Obadah Al-Manaseer</h1>
+<h2>I am a <span id="typing"></span></h2>
+<p>
+Business Lecturer and Financial Management Specialist with experience in
+academic delivery, financial operations and data-driven decision making.
+</p>
+<button>Download CV</button>
+<button class="outline">Contact Me</button>
+</div>
+
+<div class="photo">
+<div class="circle">PHOTO</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Professional Expertise</h2>
+<div class="cards">
+<div>🎓<h3>Academic Leadership</h3><p>BTEC Curriculum Delivery & Teaching Excellence</p></div>
+<div>💰<h3>Financial Management</h3><p>Budgeting, Forecasting and Reporting</p></div>
+<div>📊<h3>Data Analytics</h3><p>Excel Models and Power BI Dashboards</p></div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Career Journey</h2>
+<div class="timeline">
+<div>2025 - Present<br><b>Business Lecturer</b></div>
+<div>2024 - Present<br><b>Financial Affairs Team Leader</b></div>
+<div>2021 - 2024<br><b>Operations Manager</b></div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Teaching Modules</h2>
+<div class="cards">
+<div>Financial Accounting Principles</div>
+<div>Managerial Accounting</div>
+<div>Financial Management</div>
+<div>Business Statistics</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Obadah Al-Manaseer</p>
+</footer>
+
+<script>
+const words=["Business Lecturer","Financial Specialist","Academic Leader","Data Analyst"];
+let i=0,j=0;
+function type(){
+ let w=words[i];
+ document.getElementById("typing").textContent=w.substring(0,j++);
+ if(j>w.length){i=(i+1)%words.length;j=0;setTimeout(type,1000);return;}
+ setTimeout(type,100);
+}
+type();
+
+document.getElementById("theme").onclick=()=>{
+ document.body.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
