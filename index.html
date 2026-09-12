@@ -8,7 +8,8 @@
 <style>.premium-nav-space{padding-top:90px;}</style></head>
 <body class="premium-nav-space">
 <header class="navbar">
-<nav class="main-nav">
+<button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+<nav class="main-nav" id="mainNav">
 <a href="#home" class="active">Home</a>
 <a href="#about">Profile</a>
 <a href="#academic">Education</a>
@@ -212,6 +213,12 @@ window.addEventListener("scroll", () => {
             link.classList.add("active");
         }
     });
+});
+</script>
+<script>
+function toggleMenu(){document.getElementById("mainNav").classList.toggle("open");}
+document.querySelectorAll(".main-nav a").forEach(link=>{
+link.addEventListener("click",()=>document.getElementById("mainNav").classList.remove("open"));
 });
 </script>
 </body>
